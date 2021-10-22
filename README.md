@@ -33,7 +33,7 @@ Dieses Projekt kann als Vorlage für die meisten sozialen Organisationen verwend
 
 
 ### Database :
-here is the SQL File to create the database
+Hier ist die SQL-Datei zum Erstellen der Datenbank
 ``` ruby
 BEGIN TRANSACTION;
 CREATE TABLE IF NOT EXISTS "Mother_Language" (
