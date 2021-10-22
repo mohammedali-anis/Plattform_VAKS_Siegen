@@ -182,13 +182,14 @@ CREATE TABLE IF NOT EXISTS "Document" (
 );
 ```
 
-##### 5. Das Projekt ausführen
-Zuerst wurde die Anwendung auf dem lokalen Computer mit dem Betriebssystem macOS Big Sur und auf einem Macbook Air erstellt. Mit dieser einfachen Anwendung wurden viele der Funktionen eingeführt und konfiguriert, die später im größeren Kontext verwendet werden. Zu diesem Zweck wurde das Maven Plugin mit einem eingebetteten Anwendungsserver verwendet.
-Die Anwendung wurde mit dem Git-Repository verbunden, das den gesamten Quellcode enthält und die Versionskontrolle für die Anwendung durchführt. Die Datenbank wurde so erstellt und konfiguriert, dass sie zuverlässig und skalierbar ist und mit der Anwendung verbunden wurde.
-Die Anwendung kann von meinem Github durch das Klonen des Repositorys
-```BachelorArbeit``` heruntergeladen werden. 
+### Das Projekt ausfühen :
+Zuerst wurde die Anwendung auf dem lokalen Computer mit dem Betriebssystem macOS Big Sur und auf einem Macbook Air erstellt. 
+Mit dieser einfachen Anwendung wurden viele der Funktionen eingeführt und konfiguriert, die später im größeren Kontext verwendet werden. Zu diesem Zweck wurde das Maven Plugin mit einem eingebetteten Anwendungsserver verwendet.
+Die Anwendung wurde mit dem Git-Repository verbunden, das den gesamten Quellcode enthält und die Versionskontrolle für die Anwendung durchführt. 
+Die Datenbank wurde so erstellt und konfiguriert, dass sie zuverlässig und skalierbar ist und mit der Anwendung verbunden wurde.
+Die Anwendung kann von meinem Github durch das Klonen des Repositorys```BachelorArbeit``` heruntergeladen werden. 
 Durch die Eingabe der folgenden Befehle im Terminal kann der Prozess durchgeführt werden :
 Apache Maven muss installiert sein oder kann über den folgenden Befehl durch Homebrew installiert werden:
 ```brew install maven```
-Bei der Eingabe des Befehls ```mvn spring-boot:run``` im selben Verzeichnis, in dem der Klonen-Prozess durchgeführt wurde, dann ist die Anwendung über Port 8080 zugänglich.
+Bei der Eingabe des Befehls ```mvn spring-boot:run``` im selben Verzeichnis, in dem der Klonen-Prozess durchgeführt wurde, dann ist die Anwendung über Port ```8080``` zugänglich.
 Die Homepage kann über den Browser über die URI ```localhost:8080/``` aufgerufen werden.
