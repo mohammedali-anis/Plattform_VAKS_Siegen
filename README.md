@@ -1,6 +1,5 @@
 # Plattforn für Verein für soziale Arbeit und Kultur in Siegen
-## Konzeptionierung und Entwicklung einer Web-Applikation zur Digitalisierung
-der Arbeitsprozesse einer sozialen Organisation
+## Konzeptionierung und Entwicklung einer Web-Applikation zur Digitalisierung der Arbeitsprozesse einer sozialen Organisation
 ### Bachelorarbeit
 
 Das Projekt wurde als Bachelorarbeit an der Universität Siegen etabliert und präsentiert und betreut von [AR Dr.-Ing. Andreas Hoffmann](https://www.bs.informatik.uni-siegen.de/mitarbeiter/hoffmann/index_html).
