@@ -2,7 +2,7 @@
 ## Konzeptionierung und Entwicklung einer Web-Applikation zur Digitalisierung der Arbeitsprozesse einer sozialen Organisation
 ### Bachelorarbeit
 
-Das Projekt wurde als Bachelorarbeit an der Universität Siegen etabliert und präsentiert und betreut von [AR Dr.-Ing. Andreas Hoffmann](https://www.bs.informatik.uni-siegen.de/mitarbeiter/hoffmann/index_html).
+Das Projekt wurde als Bachelorarbeit an der Universität Siegen etabliert und präsentiert und wurde von [AR Dr.-Ing. Andreas Hoffmann](https://www.bs.informatik.uni-siegen.de/mitarbeiter/hoffmann/index_html)  betreut.
 
 Diese Arbeit befasst sich mit der Konzipierung, Implementierung und dem Design einer Web-Applikation mit dem Ziel, den Arbeitsprozess einer sozialen Organisation zu digitalisieren und damit zu erleichtern und besser zu organisieren.
 Hierzu wird das Spring Framework in Verbindung mit HTML, CSS, JavaScript, Datenbank SQlite und verschiedene API verwenden.
