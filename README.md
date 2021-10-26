@@ -1,4 +1,4 @@
-# Plattforn für Verein für soziale Arbeit und Kultur in Siegen
+# Plattform für Verein für soziale Arbeit und Kultur in Siegen
 ## Konzeptionierung und Entwicklung einer Web-Applikation zur Digitalisierung der Arbeitsprozesse einer sozialen Organisation
 ### Bachelorarbeit
 
