@@ -661,15 +661,12 @@ body {
 						</ul>
 
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#"><span class="glyphicon glyphicon-user"></span>
-									Profile</a></li>
 							<li><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown"><span
-									class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span
+									class="glyphicon glyphicon-log-in"></span> Logout <span
 									class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="Login">Login</a></li>
-									<li><a href="SignUp">Sign Up</a></li>
+									<li><a href="Login">Sign Out</a></li>
 								</ul></li>
 						</ul>
 					</div>
@@ -707,18 +704,22 @@ body {
 			</ul>
 		</div>
 		<div class="main">
-			<ul class="topbar clearfix">
-				<li><a href="#">q</a></li>
-				<li><a href="#">p</a></li>
-				<li><a href="#">o</a></li>
-				<li><a href="#">f</a></li>
-				<li><a href="#">n</a></li>
-			</ul>
+			
 			<div class="mainContent clearfix">
 				<div id="dashboard">
 					<h2 class="header">
 						<span class="icon"></span>Dashboard
 					</h2>
+					
+ <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+ <div class="elfsight-app-fa553e45-6aa0-42fc-8b24-2dd4dee0d39d"></div>
+
+ <script src="https://apps.elfsight.com/p/platform.js" defer></script> 
+ <div class="elfsight-app-a0e47545-dfc6-416f-8fcd-78ba43c25ac0"></div> 
+
+ <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+ <div class="elfsight-app-82714bd8-9800-40e3-96be-879a60a0aff2"></div>
+					
 					<!-- 					<div class="monitor"> -->
 					<!-- 						<h4>Right Now</h4> -->
 					<!-- 						<div class="clearfix"> -->
@@ -1264,7 +1265,7 @@ body {
 								}
 								String id = GoogleKalendar.utfTObase(string_calendar_id);
 								String publicCalendarId = GoogleKalendar.utfTObase("vaks.noreply@gmail.com");
-								System.err.println(id);
+// 								System.err.println(id);
 					%>
 					<div class="page-wrap">
 						<!-- The ID's here most be in Base64

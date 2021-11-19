@@ -84,26 +84,26 @@ public class GoogleKalendar {
 		// List the next events from the primary calendar.
 		DateTime now = new DateTime("2000-10-07T18:01:53.114+02:00");
 		// Print the started date
-		System.err.println("Start From : " + now.toString());
+//		System.err.println("Start From : " + now.toString());
 
 		Events events = service.events().list("primary").setTimeMin(now).setOrderBy("startTime").setSingleEvents(true)
 				.execute();
 		List<Event> items = events.getItems();
 		// Print the Events count
-		System.err.println("The number of the events Is : " + items.size());
+//		System.err.println("The number of the events Is : " + items.size());
 
-		System.out.println();
+//		System.out.println();
 
 		if (items.isEmpty()) {
-			System.out.println("No upcoming events found.");
+//			System.out.println("No upcoming events found.");
 		} else {
-			System.out.println("Upcoming events");
+//			System.out.println("Upcoming events");
 			for (Event event : items) {
 				DateTime start = event.getStart().getDateTime();
 				if (start == null) {
 					start = event.getStart().getDate();
 				}
-				System.out.printf("%s (%s)\n", event.getSummary(), start);
+//				System.out.printf("%s (%s)\n", event.getSummary(), start);
 			}
 		}
 
@@ -133,12 +133,12 @@ public class GoogleKalendar {
 
 		Event event = new Event().setSummary(eventName).setLocation(Location);
 
-		DateTime startDateTime = new DateTime(startDate + "T" + startTime + ":00+02:00"); // :00 is Seconds and +02:00
+		DateTime startDateTime = new DateTime(startDate + "T" + startTime + ":00+01:00"); // :00 is Seconds and +02:00
 																							// is the time zone offset
 		EventDateTime start = new EventDateTime().setDateTime(startDateTime).setTimeZone("Europe/Berlin");
 		event.setStart(start);
 
-		DateTime endDateTime = new DateTime(endDate + "T" + endTime + ":00+02:00"); // :00 is Seconds and +02:00 is the
+		DateTime endDateTime = new DateTime(endDate + "T" + endTime + ":00+01:00"); // :00 is Seconds and +02:00 is the
 																					// time zone offset
 		EventDateTime end = new EventDateTime().setDateTime(endDateTime).setTimeZone("Europe/Berlin");
 		event.setEnd(end);
@@ -180,7 +180,7 @@ public class GoogleKalendar {
 		com.google.api.services.calendar.model.Calendar createdCalendar = service2.calendars().insert(calendar)
 				.execute();
 
-		System.out.println("calender Created, The calender ID : " + createdCalendar.getId());
+//		System.out.println("calender Created, The calender ID : " + createdCalendar.getId());
 		/*
 		 * CalendarID = qe3vrs29258alk1rcnk7h4h26o@group.calendar.google.com return the
 		 * first part before @
@@ -204,7 +204,7 @@ public class GoogleKalendar {
 
 		// Delete an event
 		service.events().delete(calendarID, eventID).execute();
-		System.out.println("Event has been deleted");
+//		System.out.println("Event has been deleted");
 	}
 
 	public static String decoderEventId(String eventID) {
@@ -234,7 +234,7 @@ public class GoogleKalendar {
 
 		// Delete a calendar
 		service.calendars().delete(calenderID).execute();
-		System.out.println("Calender has been deleted");
+//		System.out.println("Calender has been deleted");
 	}
 
 	/**
@@ -261,7 +261,7 @@ public class GoogleKalendar {
 
 		// Insert new access rule
 		AclRule createdRule = service.acl().insert(string_calendar_id + "@group.calendar.google.com", rule).execute();
-		System.out.println(createdRule.getId());
+//		System.out.println(createdRule.getId());
 
 	}
 
@@ -306,11 +306,11 @@ public class GoogleKalendar {
 		// Retrieve the event from the API
 		Event event = service.events().get(calendar_id, event_id).execute();
 
-		DateTime startDateTime = new DateTime(startDate + "T" + startTime + ":00+02:00"); // :00 is Seconds and +02:00
+		DateTime startDateTime = new DateTime(startDate + "T" + startTime + ":00+01:00"); // :00 is Seconds and +02:00
 																							// is the time zone offset
 		EventDateTime start = new EventDateTime().setDateTime(startDateTime).setTimeZone("Europe/Berlin");
 
-		DateTime endDateTime = new DateTime(endDate + "T" + endTime + ":00+02:00"); // :00 is Seconds and +02:00 is the
+		DateTime endDateTime = new DateTime(endDate + "T" + endTime + ":00+01:00"); // :00 is Seconds and +02:00 is the
 																					// time zone offset
 		EventDateTime end = new EventDateTime().setDateTime(endDateTime).setTimeZone("Europe/Berlin");
 
@@ -323,7 +323,7 @@ public class GoogleKalendar {
 		// Update the event
 		Event updatedEvent = service.events().update(calendar_id, event_id, event).execute();
 
-		System.out.println(updatedEvent.getUpdated());
+//		System.out.println(updatedEvent.getUpdated());
 
 	}
 
@@ -356,9 +356,9 @@ public class GoogleKalendar {
 
 			if (items.get(i).getSummary().equals(title) && items.get(i).getLocation().equals(location)
 					&& items.get(i).getStart().getDateTime().toString()
-							.equals(startDate + "T" + startTime + ":00.000+02:00")
+							.equals(startDate + "T" + startTime + ":00.000+03:00")
 					&& items.get(i).getEnd().getDateTime().toString()
-							.equals(endDate + "T" + endTime + ":00.000+02:00")) {
+							.equals(endDate + "T" + endTime + ":00.000+03:00")) {
 				id = items.get(i).getId();
 			}
 		}

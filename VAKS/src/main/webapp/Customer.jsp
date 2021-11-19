@@ -676,15 +676,12 @@ body {
 						</ul>
 
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#"><span class="glyphicon glyphicon-user"></span>
-									Profile</a></li>
 							<li><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown"><span
-									class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span
+									class="glyphicon glyphicon-log-in"></span> Logout <span
 									class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="Login">Login</a></li>
-									<li><a href="SignUp">Sign Up</a></li>
+									<li><a href="Login">Sign out</a></li>
 								</ul></li>
 						</ul>
 					</div>
@@ -720,17 +717,12 @@ body {
 			</ul>
 		</div>
 		<div class="main">
-			<ul class="topbar clearfix">
-				<li><a href="#">q</a></li>
-				<li><a href="#">p</a></li>
-				<li><a href="#">o</a></li>
-				<li><a href="#">f</a></li>
-				<li><a href="#">n</a></li>
-			</ul>
 			<div class="mainContent clearfix">
 				<div id="Dashboard">
+				
 					<h2 class="header"><span class="icon"></span>Dashboard</h2>
 										<div class="monitor">
+ 
 											<h4>Information about your supervisor</h4>
 											<div class="clearfix">
 												<ul class="content">
@@ -787,6 +779,9 @@ body {
 <!-- 												<button type="submit" class="submit" name="submit">Publish</button> -->
 <!-- 											</form> -->
 <!-- 										</div> -->
+
+
+
 				</div>
 
 				<div id="User">
@@ -1296,7 +1291,7 @@ body {
 								}
 								String id = GoogleKalendar.utfTObase(string_calendar_id);
 								String publicCalendarId = GoogleKalendar.utfTObase("vaks.noreply@gmail.com");
-								System.err.println(id);
+// 								System.err.println(id);
 					%>
 					<div class="page-wrap">
 						<!-- The ID's here most be in Base64
@@ -1529,7 +1524,7 @@ body {
 																String firstDay = sdf.format(cal.getTime());  
 																//Displaying the new Date after addition of Days to current date
 																
-																System.out.println("Date after Addition: "+firstDay);
+// 																System.out.println("Date after Addition: "+firstDay);
 																
 																if(!firstDay.split(",")[0].equals("Sat") && !firstDay.split(",")[0].equals("Sun")) {
 																	

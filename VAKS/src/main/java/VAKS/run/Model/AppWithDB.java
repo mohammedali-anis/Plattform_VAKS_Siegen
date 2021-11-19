@@ -274,7 +274,7 @@ public class AppWithDB {
 			con.close();
 			posted.close();
 
-			System.out.println("User has been added");
+//			System.out.println("User has been added");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -609,7 +609,7 @@ public class AppWithDB {
 		posted10.execute();
 		posted10.close();
 
-		System.err.println("User has been deleted");
+//		System.err.println("User has been deleted");
 	}
 
 	public static byte[] readFile(String file) {
@@ -623,9 +623,9 @@ public class AppWithDB {
 				bos.write(buffer, 0, len);
 			}
 		} catch (FileNotFoundException e) {
-			System.err.println(e.getMessage());
+//			System.err.println(e.getMessage());
 		} catch (IOException e2) {
-			System.err.println(e2.getMessage());
+//			System.err.println(e2.getMessage());
 		}
 		return bos != null ? bos.toByteArray() : null;
 	}
@@ -664,12 +664,12 @@ public class AppWithDB {
 				pstmt.setString(6, path);
 
 				pstmt.executeUpdate();
-				System.out.println("Stored the file in the BLOB column.");
+//				System.out.println("Stored the file in the BLOB column.");
 				pstmt.close();
 				conn.close();
 
 			} catch (SQLException e) {
-				System.out.println(e.getMessage());
+//				System.out.println(e.getMessage());
 			}
 
 			Connection con2 = connect();
@@ -708,12 +708,12 @@ public class AppWithDB {
 				pstmt.setString(6, path);
 
 				pstmt.executeUpdate();
-				System.out.println("Stored the file in the BLOB column.");
+//				System.out.println("Stored the file in the BLOB column.");
 				pstmt.close();
 				conn.close();
 
 			} catch (SQLException e) {
-				System.out.println(e.getMessage());
+//				System.out.println(e.getMessage());
 			}
 
 			Connection con2 = connect();
@@ -752,12 +752,12 @@ public class AppWithDB {
 				pstmt.setString(6, path);
 
 				pstmt.executeUpdate();
-				System.out.println("Stored the file in the BLOB column.");
+//				System.out.println("Stored the file in the BLOB column.");
 				pstmt.close();
 				conn.close();
 
 			} catch (SQLException e) {
-				System.out.println(e.getMessage());
+//				System.out.println(e.getMessage());
 			}
 
 			Connection con2 = connect();
@@ -814,7 +814,7 @@ public class AppWithDB {
 		posted3.execute();
 		posted3.close();
 
-		System.out.println("Document has been deleted ");
+//		System.out.println("Document has been deleted ");
 
 	}
 
@@ -826,7 +826,7 @@ public class AppWithDB {
 
 		String string_calendar_id = null;
 
-		System.err.println(event_type);
+//		System.err.println(event_type);
 
 		if (event_type.equals("All")) {
 			query1 = "Insert into Event (event_name, from_date, from_time, to_date, to_time, location, event_type, calendar_id )  values ( '"
@@ -904,7 +904,7 @@ public class AppWithDB {
 			for_user_isNull = r.wasNull();
 
 		}
-		System.out.println("Role Type " + role_type + ", Is Null ? " + for_user_isNull);
+//		System.out.println("Role Type " + role_type + ", Is Null ? " + for_user_isNull);
 		r.close();
 		s.close();
 
@@ -1065,7 +1065,7 @@ public class AppWithDB {
 
 		String string_calendar_id = null;
 
-		System.err.println(event_type);
+//		System.err.println(event_type);
 
 		if (event_type.equals("All")) {
 			query1 = "Update Event SET event_name ='" + title + "', from_date = '" + date + "', from_time = '"
@@ -1130,7 +1130,7 @@ public class AppWithDB {
 
 		String string_calendar_id = null;
 
-		System.err.println(event_type);
+//		System.err.println(event_type);
 
 		query1 = "Insert into Event (event_name, from_date, from_time, to_date, to_time, location, event_type, calendar_id )  values ( '"
 				+ title + "', '" + date + "', '" + startTime + "', '" + date + "', '" + endTime + "', '" + location

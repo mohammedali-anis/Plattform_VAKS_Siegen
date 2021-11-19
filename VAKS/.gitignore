@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+./Users/mohammedalianis/git/BachelorArbeit/VAKS/src/main/resources/static/**
+.src/main/resources/**
+
+/Users/mohammedalianis/git/BachelorArbeit/VAKS/src/main/resources/static/**
+src/main/resources/**

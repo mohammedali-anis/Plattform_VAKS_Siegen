@@ -66,7 +66,7 @@ public class SignUpController {
 				motherLanguage, residencePermit, street, number, city, post_code, high_school, university,
 				integration_course, dsh_course, german_level);
 
-//		VAKS.run.GoogleMail.Email.giveSupervisorInfoEmail(userName, email);
+		VAKS.run.GoogleMail.Email.giveSupervisorInfoEmail(userName, email);
 
 		return "HomePage";
 

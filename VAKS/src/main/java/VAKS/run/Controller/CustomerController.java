@@ -71,7 +71,7 @@ public class CustomerController {
 	public String showTable(@RequestParam(required = false) String user_id_hidden, String actionBtnValue)
 			throws SQLException, IOException {
 
-		System.out.println(user_id_hidden + " " + actionBtnValue);
+//		System.out.println(user_id_hidden + " " + actionBtnValue);
 
 		if (actionBtnValue.equals("Delete") && !user_id_hidden.equals("cancel")) {
 
@@ -302,7 +302,7 @@ public class CustomerController {
 		String startTime = time.split(" - ")[0];
 		String endTime = time.split(" - ")[1];
 		String location = "Hinterstraße 52, 57072 Siegen";
-		System.out.println(privacy);
+//		System.out.println(privacy);
 
 		// Add the event in DB and return the calendarID which the event most be added
 		// on
@@ -321,8 +321,7 @@ public class CustomerController {
 		con1.close();
 		posted1.close();
 
-//		VAKS.run.GoogleMail.Email.userCreateEventEmail(string_event_id);
-//		VAKS.run.GoogleMail.Email.userCreateEventEmail(string_event_id);
+		VAKS.run.GoogleMail.Email.userCreateEventEmail(string_event_id);
 
 		return "redirect:/Customer#ManageEvents";
 
@@ -368,12 +367,10 @@ public class CustomerController {
 			s.close();
 
 			AppWithDB.sqlDeleteEventByManager(event_id_hidden);
-			System.out.println(event_id_hidden);
+//			System.out.println(event_id_hidden);
 
-//			VAKS.run.GoogleMail.Email.userDeleteEventEmail(event_name, from_date, from_time, to_time, event_id,
-//					first_name, last_name, gender, email);
-//			VAKS.run.GoogleMail.Email.userDeleteEventEmail(event_name, from_date, from_time, to_time, event_id,
-//					first_name, last_name, gender, email);
+			VAKS.run.GoogleMail.Email.userDeleteEventEmail(event_name, from_date, from_time, to_time, event_id,
+					first_name, last_name, gender, email);
 		}
 
 		return "redirect:/Customer#ManageEvents";
@@ -401,7 +398,7 @@ public class CustomerController {
 			String title, String date, String startTime, String endTime, String location)
 			throws SQLException, IOException, GeneralSecurityException {
 
-		System.out.println("For User Edit" + for_user);
+//		System.out.println("For User Edit" + for_user);
 
 		if (privacy.equals("All")) {
 
@@ -437,13 +434,13 @@ public class CustomerController {
 
 			while (r.next()) {
 				role_type = r.getString("role_type");
-				System.out.println("Edit role_type = " + role_type);
+//				System.out.println("Edit role_type = " + role_type);
 			}
 			r.close();
 			s.close();
 
-			System.err.println("For User : " + for_user);
-			System.err.println("Role_Type : " + role_type);
+//			System.err.println("For User : " + for_user);
+//			System.err.println("Role_Type : " + role_type);
 
 			if (!for_user.equals(LoginController.getLoggedInUserId()) && !role_type.equals("Customer")) {
 
@@ -528,8 +525,7 @@ public class CustomerController {
 
 				GoogleKalendar.editEvent(string_event_id, calendarID, title, location, date, date, startTime, endTime);
 
-//				VAKS.run.GoogleMail.Email.userEditEventEmail(string_event_id);
-//				VAKS.run.GoogleMail.Email.userEditEventEmail(string_event_id);
+				VAKS.run.GoogleMail.Email.userEditEventEmail(string_event_id);
 
 			}
 
@@ -553,7 +549,7 @@ public class CustomerController {
 			throws SQLException, IOException, GeneralSecurityException {
 
 		documentSearch = searchDocumentUser;
-		System.out.println(documentSearch);
+//		System.out.println(documentSearch);
 
 		return "redirect:/Customer#Documents";
 
@@ -573,7 +569,7 @@ public class CustomerController {
 			throws SQLException, IOException, GeneralSecurityException {
 
 		bookingSelectedDate = date;
-		System.out.println("bookingSelectedDate + " + bookingSelectedDate);
+//		System.out.println("bookingSelectedDate + " + bookingSelectedDate);
 
 		return "redirect:/Customer#ManageEvents";
 

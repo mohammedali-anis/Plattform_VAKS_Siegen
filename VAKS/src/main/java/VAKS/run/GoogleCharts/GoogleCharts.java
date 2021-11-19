@@ -71,21 +71,21 @@ public class GoogleCharts {
 	public static Map<String, Integer> residenceCount() throws SQLException {
 		ResultSet r = null;
 
-		String Query = "SELECT residence_permit_type, COUNT(residence_permit_id) AS Number FROM User Natural Join Residence_Permit Natural Join User_Residence_Permit where residence_permit_type!='Citizen' GROUP BY residence_permit_type;";
+		String Query = "SELECT residence_permit_type, COUNT(residence_permit_id) AS Number FROM User Natural Join Residence_Permit Natural Join User_Residence_Permit GROUP BY residence_permit_type;";
 		Statement s = null;
 		s = AppWithDB.connect().createStatement();
 		r = s.executeQuery(Query);
 
 		while (r.next()) {
 
-			System.out.println(r.getString("residence_permit_type"));
-			System.out.println(r.getString(2));
+//			System.out.println(r.getString("residence_permit_type"));
+//			System.out.println(r.getString(2));
 			residenceCountCard.put(r.getString("residence_permit_type"), Integer.parseInt(r.getString(2)));
 		}
 		r.close();
 		s.close();
 
-		System.out.println(residenceCountCard);
+//		System.out.println(residenceCountCard);
 		Map<String, Integer> graphData = new TreeMap<>();
 
 		for (int i = 0; i < residenceCountCard.size(); i++) {
@@ -94,7 +94,7 @@ public class GoogleCharts {
 					residenceCountCard.get(residenceCountCard.keySet().toArray()[i]));
 
 		}
-		System.out.println("GD" + graphData);
+//		System.out.println("GD" + graphData);
 
 		return graphData;
 	}
@@ -114,14 +114,14 @@ public class GoogleCharts {
 
 		while (r.next()) {
 
-			System.out.println(r.getString("german_level"));
-			System.out.println(r.getString(2));
+//			System.out.println(r.getString("german_level"));
+//			System.out.println(r.getString(2));
 			integrationCourseCard.put(r.getString("german_level"), Integer.parseInt(r.getString(2)));
 		}
 		r.close();
 		s.close();
 
-		System.out.println(integrationCourseCard);
+//		System.out.println(integrationCourseCard);
 		Map<String, Integer> graphData = new TreeMap<>();
 
 		for (int i = 0; i < integrationCourseCard.size(); i++) {
@@ -130,7 +130,7 @@ public class GoogleCharts {
 					integrationCourseCard.get(integrationCourseCard.keySet().toArray()[i]));
 
 		}
-		System.out.println("GD" + graphData);
+//		System.out.println("GD" + graphData);
 
 		return graphData;
 	}
@@ -150,14 +150,14 @@ public class GoogleCharts {
 
 		while (r.next()) {
 
-			System.out.println(r.getString("country"));
-			System.out.println(r.getString(2));
+//			System.out.println(r.getString("country"));
+//			System.out.println(r.getString(2));
 			homeLandCard.put(r.getString("country"), Integer.parseInt(r.getString(2)));
 		}
 		r.close();
 		s.close();
 
-		System.out.println(homeLandCard);
+//		System.out.println(homeLandCard);
 		Map<String, Integer> graphData = new TreeMap<>();
 
 		for (int i = 0; i < homeLandCard.size(); i++) {
@@ -166,7 +166,7 @@ public class GoogleCharts {
 					homeLandCard.get(homeLandCard.keySet().toArray()[i]));
 
 		}
-		System.out.println("GD" + graphData);
+//		System.out.println("GD" + graphData);
 
 		return graphData;
 	}
@@ -250,14 +250,14 @@ public class GoogleCharts {
 
 		while (r.next()) {
 
-			System.out.println(r.getString("city"));
-			System.out.println(r.getString(2));
+//			System.out.println(r.getString("city"));
+//			System.out.println(r.getString(2));
 			residentCard.put(r.getString("city"), Integer.parseInt(r.getString(2)));
 		}
 		r.close();
 		s.close();
 
-		System.out.println(residentCard);
+//		System.out.println(residentCard);
 		Map<String, Integer> graphData = new TreeMap<>();
 
 		for (int i = 0; i < residentCard.size(); i++) {
@@ -266,7 +266,7 @@ public class GoogleCharts {
 					residentCard.get(residentCard.keySet().toArray()[i]));
 
 		}
-		System.out.println("GD" + graphData);
+//		System.out.println("GD" + graphData);
 
 		return graphData;
 	}

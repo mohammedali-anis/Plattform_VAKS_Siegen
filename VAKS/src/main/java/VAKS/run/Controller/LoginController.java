@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import VAKS.run.Model.AppWithDB;
+
 /**
  * Login Controller
  * 
@@ -32,7 +33,7 @@ public class LoginController {
 	public static void setLoggedInUsername(String loggedInUsername) {
 		LoginController.loggedInUsername = loggedInUsername;
 	}
-	
+
 	public static String getLoggedInUserId() {
 		return loggedInUserId;
 	}
@@ -49,37 +50,35 @@ public class LoginController {
 
 	@RequestMapping(value = "Login", method = RequestMethod.POST)
 	public String mapToRightPage(@RequestParam(required = false) String username, String password) throws SQLException {
-		
-		ResultSet r = null;
-		
 
-		String Query = "Select user_id from User where username='" + username
-				+ "' AND password='" + password + "';";
+		ResultSet r = null;
+
+		String Query = "Select user_id from User where username='" + username + "' AND password='" + password + "';";
 		Statement s = null;
 		s = AppWithDB.connect().createStatement();
 		r = s.executeQuery(Query);
 		while (r.next()) {
-			
+
 			setLoggedInUserId(r.getString("user_id"));
 		}
 		r.close();
 		s.close();
-		
+
 		System.out.println(getLoggedInUserId());
 
 		if (AppWithDB.sqlLogin(username, password) == 1) {
 			setLoggedInUsername(username);
-			return "Manager";
+			return "redirect:/Manager#dashboard";
 		} else if (AppWithDB.sqlLogin(username, password) == 2) {
 			setLoggedInUsername(username);
-			return "Worker";
+			return "redirect:/Worker#dashboard";
 		} else if (AppWithDB.sqlLogin(username, password) == 3) {
 			setLoggedInUsername(username);
-			return "Volunteer";
+			return "redirect:/Volunteer#dashboard";
 		} else if (AppWithDB.sqlLogin(username, password) == 4) {
 			setLoggedInUsername(username);
 			return "redirect:/Customer#Dashboard";
-			
+
 		} else
 			return "Error";
 	}

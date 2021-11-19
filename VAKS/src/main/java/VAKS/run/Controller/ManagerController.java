@@ -123,7 +123,7 @@ public class ManagerController {
 				motherLanguage, residencePermit, street, number, city, post_code, high_school, university,
 				integration_course, dsh_course, german_level, roleType);
 
-//		VAKS.run.GoogleMail.Email.giveSupervisorInfoEmail(userName, email);
+		VAKS.run.GoogleMail.Email.giveSupervisorInfoEmail(userName, email);
 
 		return "redirect:/Manager#User";
 
@@ -532,8 +532,8 @@ public class ManagerController {
 			r.close();
 			s.close();
 
-			System.err.println("For User : " + for_user);
-			System.err.println("Role_Type : " + role_type);
+//			System.err.println("For User : " + for_user);
+//			System.err.println("Role_Type : " + role_type);
 
 			if (!for_user.equals(LoginController.getLoggedInUserId()) && !role_type.equals("Customer")) {
 

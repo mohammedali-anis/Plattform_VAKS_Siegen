@@ -530,8 +530,8 @@ public class VolunteerController {
 			r.close();
 			s.close();
 
-			System.err.println("For User : " + for_user);
-			System.err.println("Role_Type : " + role_type);
+//			System.err.println("For User : " + for_user);
+//			System.err.println("Role_Type : " + role_type);
 
 			if (!for_user.equals(LoginController.getLoggedInUserId()) && !role_type.equals("Customer")) {
 
