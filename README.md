@@ -13,12 +13,12 @@ Dieses Projekt kann als Vorlage für die meisten sozialen Organisationen verwend
 ### Built with :
 -  Java Spring Boot
     - Das Spring Boot Framework (kurz Spring) ist ein quelloffenes Framework für die Java-Plattform, welches oft für Web-Anwendungen verwendet wird. Ziel des Spring Frameworks ist es, die Entwicklung mit Java/Java EE zu vereinfachen und gute Programmierpraktiken zu fördern. Spring bietet mit einem breiten Spektrum an Funktionalität eine ganzheitliche Lösung zur Entwicklung von Anwendungen und deren Geschäftslogiken; dabei steht die Entkopplung der Applikationskomponenten im Vordergrund.
-- SQLite
-    - SQLite ist eine gemeinfreie Programmbibliothek, die ein relationales Datenbanksystem enthält. SQLite wird in Mobiltelefonen (Android, iOS, Symbian OS, Windows Phone), in Browsern (Firefox, Safari, Chrome), Skype und vielen anderen Anwendungen eingesetzt. Es ist das verbreitetste und meistverwendete Datenbanksystem der Welt. SQLite unterstützt einen Großteil der im SQL-92-Standard festgelegten SQL-Sprachbefehle. Unter anderem implementiert SQLite Transaktionen, Unterabfragen (Subselects), Sichten (Views), Trigger und benutzerdefinierte Funktionen.
 - Google Calendar API
     - Die Google Kalender-API ist eine RESTful-API, auf die über explizite HTTP-Aufrufe oder über die Google-Clientbibliotheken zugegriffen werden kann. Die API stellt die meisten der in der Google Kalender-Weboberfläche verfügbaren Funktionen bereit.
 - Google Dialog Flow
     - Dialogflow ist eine Plattform zum Verstehen natürlicher Sprache, die zum Entwerfen und Integrieren einer dialogorientierten Benutzeroberfläche in mobile Apps, Webanwendungen, Geräte, Bots, interaktive Sprachantwortsysteme und verwandte Anwendungen verwendet wird.
+- SQLite
+    - SQLite ist eine gemeinfreie Programmbibliothek, die ein relationales Datenbanksystem enthält. SQLite wird in Mobiltelefonen (Android, iOS, Symbian OS, Windows Phone), in Browsern (Firefox, Safari, Chrome), Skype und vielen anderen Anwendungen eingesetzt. Es ist das verbreitetste und meistverwendete Datenbanksystem der Welt. SQLite unterstützt einen Großteil der im SQL-92-Standard festgelegten SQL-Sprachbefehle. Unter anderem implementiert SQLite Transaktionen, Unterabfragen (Subselects), Sichten (Views), Trigger und benutzerdefinierte Funktionen.
 - JavaScript
 - HTML 5
 - CSS
