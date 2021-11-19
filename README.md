@@ -1,4 +1,4 @@
-# Plattforn für Verein für soziale Arbeit und Kultur in Siegen
+# Plattform für Verein für soziale Arbeit und Kultur in Siegen
 ## Konzeptionierung und Entwicklung einer Web-Applikation zur Digitalisierung der Arbeitsprozesse einer sozialen Organisation
 ### Bachelorarbeit
 
@@ -188,7 +188,7 @@ Mit dieser einfachen Anwendung wurden viele der Funktionen eingeführt und konfi
 
 Die Anwendung wurde mit dem Git-Repository verbunden, das den gesamten Quellcode enthält und die Versionskontrolle für die Anwendung durchführt. 
 Die Datenbank wurde so erstellt und konfiguriert, dass sie zuverlässig und skalierbar ist und mit der Anwendung verbunden wurde.
-Die Anwendung kann von meinem Github durch das Klonen des Repositorys```BachelorArbeit``` heruntergeladen werden. 
+Die Anwendung kann von meinem Github durch das Klonen des Repositorys ```Plattform_VAKS_Siegen``` heruntergeladen werden. 
 
 Durch die Eingabe der folgenden Befehle im Terminal kann der Prozess durchgeführt werden :
 Apache Maven muss installiert sein oder kann über den folgenden Befehl durch Homebrew installiert werden:
