@@ -33,8 +33,10 @@ build/
 .vscode/
 
 
-./Users/mohammedalianis/git/BachelorArbeit/VAKS/src/main/resources/static/**
+./Users/mohammedalianis/git/Plattform_VAKS_Siegen/VAKS/src/main/resources/static/**
 .src/main/resources/**
 
-/Users/mohammedalianis/git/BachelorArbeit/VAKS/src/main/resources/static/**
+/Users/mohammedalianis/git/Plattform_VAKS_Siegen/VAKS/src/main/resources/static/**
 src/main/resources/**
+
+/Users/mohammedalianis/git/Plattform_VAKS_Siegen/VAKS/javaDoc/**
