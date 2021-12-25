@@ -183,29 +183,8 @@ CREATE TABLE IF NOT EXISTS "Document" (
 ```
 
 ### Dependencies :
-Hier sind alle notwindige Dependencies
-``` ruby
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.5</version>
-		<relativePath /> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>VAKS</groupId>
-	<artifactId>VAKS</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>VAKS</name>
-	<description>Web application for VAKS</description>
-	<properties>
-		<java.version>11</java.version>
-	</properties>
-
-
+Hier sind die alle notwendige Dependencies
+```ruby
 	<dependencies>
 
 		<!-- Don't Delete Those Dependency They are the main to run the application 
