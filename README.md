@@ -184,7 +184,7 @@ CREATE TABLE IF NOT EXISTS "Document" (
 
 ### Dependencies :
 Hier sind die alle notwendige Dependencies
-```ruby
+```
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
