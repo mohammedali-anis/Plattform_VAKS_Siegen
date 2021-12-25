@@ -186,50 +186,34 @@ CREATE TABLE IF NOT EXISTS "Document" (
 Hier sind die alle notwendige Dependencies
 ```ruby
 	<dependencies>
-
-		<!-- Don't Delete Those Dependency They are the main to run the application 
-			1, 2, 3 -->
-		<dependency>	<!-- Dependency 1 -->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>	<!-- Dependency 2 -->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>	<!-- Dependency 3 -->
+		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		<!-- Don't Delete Those Dependency They are the main to run the application 
-			1, 2, 3 -->
 
-
-		<!-- Sqlite Dependency -->
 		<dependency>
 			<groupId>org.xerial</groupId>
 			<artifactId>sqlite-jdbc</artifactId>
 			<version>3.30.1</version>
 		</dependency>
-		<!-- Sqlite Dependency -->
 
-		<!-- To Refresh without restart the server -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<!-- To Refresh without restart the server -->
-
-
-		<!-- Google Calendar API Dependency -->
-
-
-		<!-- https://mvnrepository.com/artifact/com.google.api-client/google-api-client -->
 
 		<dependency>
 			<groupId>com.google.api-client</groupId>
@@ -237,17 +221,11 @@ Hier sind die alle notwendige Dependencies
 			<version>1.23.0</version>
 		</dependency>
 
-
-		<!-- https://mvnrepository.com/artifact/com.google.oauth-client/google-oauth-client-jetty -->
-
 		<dependency>
 			<groupId>com.google.oauth-client</groupId>
 			<artifactId>google-oauth-client-jetty</artifactId>
 			<version>1.23.0</version>
 		</dependency>
-
-
-		<!-- https://mvnrepository.com/artifact/com.google.apis/google-api-services-calendar -->
 
 		<dependency>
 			<groupId>com.google.apis</groupId>
@@ -255,37 +233,18 @@ Hier sind die alle notwendige Dependencies
 			<version>v3-rev305-1.23.0</version>
 		</dependency>
 
-		<!-- Google Calendar API Dependency -->
-
-		<!-- Gmail -->
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
 			<version>1.4.7</version>
 		</dependency>
-		<!-- Gmail -->
 
-		<!-- Send SMS -->
 		<dependency>
 			<groupId>com.twilio.sdk</groupId>
 			<artifactId>twilio</artifactId>
 			<version>7.20.0</version>
 		</dependency>
-		<!-- Send SMS -->
-
-
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
-</project>
 ```
 
 ### Das Projekt ausfühen :
