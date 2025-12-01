@@ -10,7 +10,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh "mvn clean verify"
+                sh 'mvn -B clean verify'
+            }
+        }
+
+        stage('Archive Artifacts') {
+            steps {
+                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
             }
         }
     }
