@@ -1,22 +1,44 @@
 pipeline {
     agent any
 
+    environment {
+        DOCKERHUB_USER = "mohammedalianis"
+        IMAGE_NAME     = "vaks-app"
+    }
+
     stages {
+
         stage('Checkout') {
             steps {
                 checkout scm
             }
         }
 
-        stage('Build') {
+        stage('Maven Build') {
             steps {
-                sh 'mvn -B clean verify'
+                sh "mvn clean package -DskipTests"
             }
         }
 
-        stage('Archive Artifacts') {
+        stage('Docker Build') {
             steps {
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                sh "docker build -t ${DOCKERHUB_USER}/${IMAGE_NAME}:latest ."
+            }
+        }
+
+        stage('Docker Login') {
+            steps {
+                withCredentials([string(credentialsId: 'dockerhub-token', variable: 'TOKEN')]) {
+                    sh """
+                        echo "$TOKEN" | docker login -u ${DOCKERHUB_USER} --password-stdin
+                    """
+                }
+            }
+        }
+
+        stage('Docker Push') {
+            steps {
+                sh "docker push ${DOCKERHUB_USER}/${IMAGE_NAME}:latest"
             }
         }
     }
