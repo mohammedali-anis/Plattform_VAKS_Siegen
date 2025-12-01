@@ -37,24 +37,14 @@ public class GoogleCharts {
 	 * @return Connection
 	 */
 	public static Connection connect() {
-
-		Connection connect = null;
-		// Path of the DB
-		String path = "src/main/resources/Database/VAKS.db";
-
-		File file = new File(path);
-		String absolutePath = file.getAbsolutePath();
-
 		try {
-
-			connect = DriverManager.getConnection("jdbc:sqlite:" + absolutePath);
-
+			// Path INSIDE Docker container
+			String url = "jdbc:sqlite:/app/Database/VAKS.db";
+			return DriverManager.getConnection(url);
 		} catch (SQLException e) {
-
 			e.printStackTrace();
+			return null;
 		}
-
-		return connect;
 	}
 
 	@GetMapping("/demoStatistik")

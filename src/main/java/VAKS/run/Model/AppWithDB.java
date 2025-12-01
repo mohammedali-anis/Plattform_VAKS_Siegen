@@ -33,22 +33,13 @@ public class AppWithDB {
 	 * @return Connection
 	 */
 	public static Connection connect() {
-
-		Connection connect = null;
-
+		String url = "jdbc:sqlite:/app/Database/VAKS.db";
 		try {
-
-			String path = "src/main/resources/Database/VAKS.db";
-
-			File file = new File(path);
-			String absolutePath = file.getAbsolutePath();
-			connect = DriverManager.getConnection("jdbc:sqlite:" + absolutePath);
-
-		} catch (Exception e) {
+			return DriverManager.getConnection(url);
+		} catch (SQLException e) {
 			e.printStackTrace();
+			return null;
 		}
-		return connect;
-
 	}
 
 //	public static Connection connect() {
