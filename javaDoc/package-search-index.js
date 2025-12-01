@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"VAKS.run"},{"l":"VAKS.run.Controller"},{"l":"VAKS.run.GoogleCalendar"},{"l":"VAKS.run.GoogleCharts"},{"l":"VAKS.run.GoogleMail"},{"l":"VAKS.run.Model"}]
